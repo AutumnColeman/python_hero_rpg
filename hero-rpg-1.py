@@ -19,7 +19,7 @@ class Character(object):
             return True
         else:
             return False
-
+        #Or use return self.health > 0
     def print_health_status(self):
         return self.health
 
@@ -30,43 +30,6 @@ class Zombie(Character):
 
     def regenerate(self):
         self.health = 100
-
-
-# super(Zombie, self).__init__(self)
-# class Hero(object):
-#     def __init__(self):
-#         self.health = 10
-#         self.power = 5
-#
-#     def attack(self, enemy):
-#         return enemy.health - self.power
-#
-#     def alive(self):
-#         if self.health > 0:
-#             return True
-#         else:
-#             return False
-#
-#     def print_health_status(self):
-#         return self.health
-#
-# class Goblin(object):
-#     def __init__(self):
-#         self.health = 6
-#         self.power = 2
-#
-#     def attack(self, hero):
-#         return hero.health - self.power
-#
-#     def alive(self):
-#         if self.health > 0:
-#             return True
-#         else:
-#             return False
-#
-#     def print_health_status(self):
-#         return self.health
-
 
 hercules = Character(10, 5)
 tok = Character(6, 2)
