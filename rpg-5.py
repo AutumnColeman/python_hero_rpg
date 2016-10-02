@@ -174,8 +174,21 @@ class Demogorgon(Character):
     def __init__(self):
         self.name = 'demogorgon'
         self.health = 20
-        self.power = 6
+        self.power = 8
 
+    def teleport(self):
+        print "The Demogorgon teleported!"
+        print "And you can't"
+        time.sleep(1.5)
+        print "R"
+        time.sleep(1.5)
+        print "U"
+        time.sleep(1.5)
+        print "N"
+        time.sleep(1.5)
+        print ""
+
+        enemy.attack(hero)
 
 
 
@@ -199,7 +212,11 @@ class Battle(object):
                 hero.attack(enemy)
             elif input == 2:
                 pass
+            #How to I add exception for the Demogorgon to teleport?
+            # elif input == 3 and enemy.name == "Demogorgon":
+            #     enemy.teleport()
             elif input == 3:
+                enemy.teleport()
                 print "Goodbye."
                 exit(0)
             else:
@@ -319,8 +336,8 @@ class Store(object):
 
 
 hero = Hero()
-# enemies = [Shadow(), Zombie(), Medic(), Goblin(), Wizard()]
-enemies = [Goblin()]
+# enemies = [Goblin(), Shadow(), Zombie(), Medic(), Wizard(), ]
+enemies = [Demogorgon()]
 battle_engine = Battle()
 shopping_engine = Store()
 
